@@ -52,9 +52,7 @@ function configureExpressApp() {
   const app = createApp({ allowedOrigins, fallbackOrigin: primaryOrigin });
   app.set('trust proxy', Number(process.env.TRUST_PROXY) || 1);
 
-  if (NODE_ENV === 'production') {
-    attachFrontendBuild(app);
-  }
+
 
   return app;
 }
