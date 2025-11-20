@@ -7,7 +7,11 @@ const chatRoutes = require('./routes/chatRoutes');
 const eventRoutes = require('./routes/eventRoutes');
 const userRoutes = require('./routes/userRoutes');
 
-const DEV_FALLBACK_ORIGINS = ['http://localhost:5173', 'http://localhost:5174'];
+const DEV_FALLBACK_ORIGINS = [
+  'http://localhost:5173',
+  'http://localhost:5174',
+  'http://localhost:5175'
+];
 
 const createApp = ({ allowedOrigins = [], fallbackOrigin } = {}) => {
   const app = express();
