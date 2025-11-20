@@ -14,7 +14,12 @@ const User = require('./models/User');
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const PORT = Number(process.env.PORT) || 5000;
 const JWT_SECRET = process.env.JWT_SECRET;
-const DEFAULT_DEV_ORIGINS = ['http://localhost:5174', 'http://localhost:5173','http://localhost:5173register','http://localhost:5174/register'];
+const DEFAULT_DEV_ORIGINS = [
+  'http://localhost:5173',
+  'http://localhost:5174',
+  'http://localhost:5175'
+];
+
 const allowedOrigins = buildAllowedOrigins([
   process.env.FRONTEND_URL,
   process.env.DEV_FRONTEND_URL,
